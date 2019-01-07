@@ -1,19 +1,191 @@
 /**************************************************
                   Global styles
 **************************************************/
-
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+  background-color: #eee;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 22px;
+}
+p {
+  margin: 0;
+}
+small {
+  font-size: 14px;
+  font-style: italic;
+}
 /**************************************************
                       Layout
 **************************************************/
-
+.main-container {
+  background-color: #fff;
+  padding: 30px;
+}
+.row {
+  padding-bottom: 50px;
+}
+.main-nav {
+  height: 60px;
+  background-color: #333;
+}
+.main-header {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 50px;
+}
+.main-footer {
+  padding: 25px;
+}
 /**************************************************
                   Specific styles
 **************************************************/
-
+.main-nav ul {
+  float: right;
+  padding-top: 13px;
+}
+.main-nav ul li {
+  float: left;
+  border-right: 1.5px solid #fff;
+}
+.main-nav ul li:last-child {
+  border-right: none;
+}
+.main-nav ul li a {
+  color: #fff;
+  padding: 0 25px;
+  font-size: 18px;
+  line-height: 30px;
+  text-decoration: none;
+}
+.main-nav ul li a:hover {
+  color: #f90;
+  text-decoration: underline;
+}
+.logo {
+  font-size: 100px;
+  margin: 0;
+}
+.tagline {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+.basic-article {
+  padding: 25px;
+}
+.dark-article, .spec-article {
+  background-color: #333;
+  color: #fff;
+}
+.spec-article {
+  font-size: 30px;
+  line-height: 1.2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+}
+.sentence-start {
+  font-size: 80px;
+  line-height: 1;
+  color: #00CC66;
+}
+.sentence-end {
+  color: #6699CC;
+}
+.main-footer {
+  border-top: 1px solid #000;
+}
 /**************************************************
                   Media Queries
 **************************************************/
+@media all and (max-width: 992px) {
+  .spec-article {
+    font-size: 25px;
+  }
+  .sentence-start {
+    font-size: 50px;
+  }
+  .col:nth-of-type(2n+3) {
+    clear: none;
+  }
+  .row {
+    padding-bottom: 10px;
+  }
+  .basic-article {
+    padding: 10px;
+  }
+}
+@media all and (max-width: 767px) {
+  .main-nav ul li a {
+    font-size: 14px;
+  }
+  .main-header {
+    margin-bottom: 10px;
+    padding-bottom: 15px; 
+  }
+  .row  {
+    padding-bottom: 10px; 
+  }
+  h3 {
+    font-size: 24px; 
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 40px;
+    padding: 10px 0;
+  }
+  .tagline {
+    font-size: 25px;
+  }
+  .basic-article {
+    padding: 10px;
+  }
+  .spec-article {
+    font-size: 18px;
+  }
+  .sentence-start {
+    font-size: 25px;
+  }
+}
 
 /**************************************************
                   Helper classes
 **************************************************/
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
